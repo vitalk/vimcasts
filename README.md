@@ -12,6 +12,9 @@ Run script with `--help` flag to get help of available arguments.
 
 ```bash
 ./vimcasts.py --help
+
+# Fetch all episodes from 42
+./vimcasts.py --starts-from=42
 ```
 
 ## Copyrights

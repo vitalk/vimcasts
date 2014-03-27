@@ -123,8 +123,10 @@ if __name__ == '__main__':
     import argparse
 
     parser = argparse.ArgumentParser(description='Retrieve Vimcasts (http://vimcasts.org) episodes.')
+    parser.add_argument('--starts-from', default=1, type=int,
+                        help='the episode number to start from')
     args = parser.parse_args()
 
-    for episode in Episodes(starts_from=64):
+    for episode in Episodes(starts_from=args.starts_from):
         print 'Loading episode #{} from {}'.format(episode.number, episode.url)
         episode.save(formatstr='Vimcasts/{number}-{title}')
