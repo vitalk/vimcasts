@@ -120,6 +120,11 @@ class Episodes(object):
 
 
 if __name__ == '__main__':
+    import argparse
+
+    parser = argparse.ArgumentParser(description='Retrieve Vimcasts (http://vimcasts.org) episodes.')
+    args = parser.parse_args()
+
     for episode in Episodes(starts_from=64):
         print 'Loading episode #{} from {}'.format(episode.number, episode.url)
         episode.save(formatstr='Vimcasts/{number}-{title}')

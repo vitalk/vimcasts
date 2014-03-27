@@ -8,8 +8,10 @@ download all [video archive](http://vimcasts.org/episodes/archive) in one shoot.
 
 ## Usage
 
+Run script with `--help` flag to get help of available arguments.
+
 ```bash
-./vimcasts.py
+./vimcasts.py --help
 ```
 
 ## Copyrights
