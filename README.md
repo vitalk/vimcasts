@@ -13,8 +13,8 @@ Run script with `--help` flag to get help of available arguments.
 ```bash
 ./vimcasts.py --help
 
-# Fetch all episodes from 42
-./vimcasts.py --starts-from=42
+# Fetch all episodes from 42 in quicktime video format
+./vimcasts.py --starts-from=42 --video-format=m4v
 ```
 
 ## Copyrights
