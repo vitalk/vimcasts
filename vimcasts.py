@@ -120,6 +120,16 @@ class Episodes(object):
 
 
 if __name__ == '__main__':
-    for episode in Episodes(starts_from=64):
+    import argparse
+
+    parser = argparse.ArgumentParser(description='Retrieve Vimcasts (http://vimcasts.org) episodes.')
+    parser.add_argument('--starts-from', default=1, type=int,
+                        help='the episode number to start from')
+    parser.add_argument('--video-format', help='the video format to download (m4v, ogv)', default='m4v')
+    parser.add_argument('--formatstr', help='the format string to name each episode')
+    args = parser.parse_args()
+
+    for episode in Episodes(starts_from=args.starts_from,
+                            video_format=args.video_format):
         print 'Loading episode #{} from {}'.format(episode.number, episode.url)
-        episode.save(formatstr='Vimcasts/{number}-{title}')
+        episode.save(formatstr=args.formatstr)
