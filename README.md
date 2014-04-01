@@ -15,7 +15,7 @@ Run script with `--help` flag to get help of available arguments.
 
 # Fetch all episodes starts from 42th in quicktime video format and save them
 # into separate directory
-./vimcasts.py --starts-from=42 --video-format=m4v --formatstr='Vimcasts/{number}-{title}'
+./vimcasts.py --starts-from=42 --video-format=quicktime --formatstr='Vimcasts/{number}-{title}.{ext}'
 ```
 
 ## Copyrights
